@@ -40,7 +40,6 @@ export const fotos: FotoGaleria[] = [
   { src: f('aula-com-video'), alt: 'Instrutor apresenta conteúdo técnico em vídeo para profissionais sentados', legenda: 'Aula com apoio de conteúdo em vídeo', categoria: 'turmas', w: 1024, h: 768 },
   { src: f('evento-service-center'), alt: 'Adriano ao lado de um carro com o capô aberto em estande de feira', legenda: 'Feira do setor automotivo', categoria: 'eventos', w: 960, h: 720 },
   { src: f('visita-tecnica-fabrica'), alt: 'Turma reunida em frente a uma fábrica de automóveis', legenda: 'Turma em visita técnica', categoria: 'turmas', w: 1024, h: 768 },
-  { src: f('adriano-apresentacao'), alt: 'Adriano Artico, o Tuba, falando na sala de aula do CTA', legenda: 'Adriano Artico (Tuba) na sala de aula do CTA', categoria: 'estrutura', w: 899, h: 1600 },
   { src: f('visita-tecnica-concessionaria'), alt: 'Turma de alunos posando no gramado em frente a uma concessionária', legenda: 'Turma em visita técnica', categoria: 'turmas', w: 1024, h: 768 },
   { src: f('evento-feira-ferrari'), alt: 'Adriano ao lado de um carro esportivo vermelho em uma feira', legenda: 'Feira do setor automotivo', categoria: 'eventos', w: 960, h: 720 },
   { src: f('turma-visita-2'), alt: 'Grupo grande de alunos reunidos em frente a um prédio de tijolos', legenda: 'Registro de turma', categoria: 'turmas', w: 1024, h: 768 },
@@ -60,7 +59,7 @@ export const fotos: FotoGaleria[] = [
 const v = (nome: string) => `/media/videos/${nome}`
 
 export const videos: VideoGaleria[] = [
-  { src: v('apresentacao-cta.mp4'), capa: v('apresentacao-cta-capa.webp'), titulo: 'Conheça o CTA', descricao: 'Adriano apresenta a sala, os motores, os equipamentos e o material técnico.', duracao: '3:22', vertical: true },
+  { src: v('apresentacao-cta.mp4'), capa: v('conheca-o-cta-capa.webp'), titulo: 'Conheça o CTA', descricao: 'Adriano apresenta a sala, os motores, os equipamentos e o material técnico.', duracao: '3:22', vertical: true },
   { src: v('tour-estrutura.mp4'), capa: v('tour-estrutura-capa.webp'), titulo: 'Tour pelo espaço', descricao: 'Da fachada à sala de aula e às bancadas de motores.', duracao: '1:11', vertical: true },
   { src: v('pratica-no-motor.mp4'), capa: v('pratica-no-motor-capa.webp'), titulo: 'Prática no motor', descricao: 'Orientação técnica com o motor aberto.', duracao: '0:26', vertical: false },
   { src: v('aula-pratica-motor-2.mp4'), capa: v('aula-pratica-motor-2-capa.webp'), titulo: 'Mão na massa', descricao: 'Trabalho em dupla no cofre do motor.', duracao: '0:25', vertical: false },

@@ -39,10 +39,10 @@ export function About() {
           <Reveal className="relative lg:col-span-5">
             <div className="relative mr-10 aspect-[3/4] overflow-hidden bg-navy sm:mr-24 lg:mr-14">
               <Img
-                src="/media/fotos/adriano-apresentacao"
-                alt="Adriano Artico, o Tuba, apresentando a escola na sala de aula do CTA"
+                src="/media/fotos/biblioteca-tecnica"
+                alt="Adriano Artico, o Tuba, mostrando manuais técnicos da biblioteca do CTA"
                 sizes="(min-width: 1024px) 30vw, 80vw"
-                className="size-full object-cover object-[50%_25%]"
+                className="size-full object-cover object-[40%_50%]"
               />
             </div>
             <figure className="absolute -bottom-10 right-0 w-[58%] border-[6px] border-cromo bg-cromo shadow-[0_24px_50px_-20px_rgb(6_18_46/0.55)] sm:w-[52%]">
