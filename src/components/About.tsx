@@ -18,8 +18,8 @@ const trajetoria = [
     periodo: '10/03/2016',
     titulo: 'Turmas em visita técnica',
     texto:
-      'Registro de turma da Tuba Auto Car e CEDAP Treinamentos. As visitas técnicas aproximam os alunos de fábricas, retíficas e fornecedores do setor.',
-    imagem: { src: '/media/fotos/turma-gauss-2016', alt: 'Turma de alunos reunida para foto em grupo' },
+      'Registro de turma da Tuba Auto Car. As visitas técnicas aproximam os alunos de fábricas, retíficas e fornecedores do setor.',
+    imagem: { src: '/media/fotos/turma-2016', alt: 'Turma de alunos reunida para foto em grupo' },
   },
   {
     periodo: 'Hoje',

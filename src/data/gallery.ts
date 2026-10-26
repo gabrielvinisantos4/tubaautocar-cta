@@ -35,7 +35,7 @@ export const categorias: { id: 'todas' | CategoriaGaleria; label: string }[] = [
 const f = (nome: string) => `/media/fotos/${nome}`
 
 export const fotos: FotoGaleria[] = [
-  { src: f('turma-gauss-2016'), alt: 'Turma de alunos com camisetas brancas reunida para foto em grupo', legenda: 'Turma Tuba Auto Car e CEDAP Treinamentos, 10/03/2016', categoria: 'turmas', w: 1063, h: 709 },
+  { src: f('turma-2016'), alt: 'Turma de alunos com camisetas brancas reunida para foto em grupo', legenda: 'Turma Tuba Auto Car, 10/03/2016', categoria: 'turmas', w: 1063, h: 560 },
   { src: f('evento-mecanica2000'), alt: 'Adriano Artico ao lado da equipe no estande da Mecânica 2000', legenda: 'Estande da Mecânica 2000 em feira do setor', categoria: 'eventos', w: 1448, h: 1086 },
   { src: f('aula-com-video'), alt: 'Instrutor apresenta conteúdo técnico em vídeo para profissionais sentados', legenda: 'Aula com apoio de conteúdo em vídeo', categoria: 'turmas', w: 1024, h: 768 },
   { src: f('evento-service-center'), alt: 'Adriano ao lado de um carro com o capô aberto em estande de feira', legenda: 'Feira do setor automotivo', categoria: 'eventos', w: 960, h: 720 },
