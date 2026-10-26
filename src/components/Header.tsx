@@ -15,7 +15,7 @@ export function Logo({ className = 'h-10' }: { className?: string }) {
         height={212}
         className={`${className} w-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]`}
       />
-      <span className="hidden border-l border-cromo/20 pl-3 leading-tight xl:block">
+      <span className="hidden border-l border-cromo/20 pl-3 leading-tight 2xl:block">
         <span className="block font-display text-xl font-extrabold tracking-wide text-cromo">{site.sigla}</span>
         <span className="block text-[0.7rem] text-aco">{site.descricaoSigla}</span>
       </span>
@@ -74,7 +74,7 @@ export function Header() {
       <div className="container-x flex h-[4.5rem] items-center justify-between gap-6">
         <Logo className="h-10 sm:h-11" />
 
-        <nav aria-label="Navegação principal" className="hidden lg:block">
+        <nav aria-label="Navegação principal" className="hidden xl:block">
           <ul className="flex items-center gap-1">
             {navegacao.map((item) => (
               <li key={item.id}>
@@ -112,7 +112,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setAberto((v) => !v)}
-            className="grid size-12 place-items-center text-cromo lg:hidden"
+            className="grid size-12 place-items-center text-cromo xl:hidden"
             aria-expanded={aberto}
             aria-controls="menu-mobile"
             aria-label={aberto ? 'Fechar menu' : 'Abrir menu'}
@@ -131,7 +131,7 @@ export function Header() {
             animate={{ opacity: 1, height: '100dvh' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="scope-grid overflow-hidden bg-ink lg:hidden"
+            className="scope-grid overflow-hidden bg-ink xl:hidden"
           >
             <ul className="container-x flex flex-col pt-4">
               {navegacao.map((item, i) => (

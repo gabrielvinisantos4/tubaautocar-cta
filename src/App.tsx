@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
 import { CoursesSection } from './components/CoursesSection'
+import { WorkshopSection } from './components/WorkshopSection'
 import { EquipmentSection } from './components/EquipmentSection'
 import { Differentials } from './components/Differentials'
 import { Gallery } from './components/Gallery'
@@ -21,6 +22,7 @@ export default function App() {
           <Hero />
           <About />
           <CoursesSection />
+          <WorkshopSection />
           <EquipmentSection />
           <Differentials />
           <Gallery />

@@ -43,7 +43,8 @@ export const navegacao = [
   { id: 'inicio', label: 'Início' },
   { id: 'sobre', label: 'Sobre a escola' },
   { id: 'cursos', label: 'Cursos' },
-  { id: 'estrutura', label: 'Estrutura e equipamentos' },
+  { id: 'oficinas', label: 'Para oficinas' },
+  { id: 'estrutura', label: 'Estrutura' },
   { id: 'galeria', label: 'Galeria' },
   { id: 'contato', label: 'Contato' },
 ] as const
