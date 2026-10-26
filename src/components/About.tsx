@@ -26,7 +26,7 @@ const trajetoria = [
     titulo: 'CTA em Colorado-PR',
     texto:
       'Sala de aula, motores em bancada, equipamentos de diagnóstico e uma biblioteca de manuais técnicos na Avenida Paraná, próximo ao Fórum.',
-    imagem: { src: '/media/fotos/sala-de-aula', alt: 'Sala de aula do CTA com carteiras e estantes ao fundo' },
+    imagem: { src: '/media/fotos/fachada-noite', alt: 'Fachada do CTA à noite, com a sala de aula iluminada e o letreiro da Tuba Auto Car' },
   },
 ]
 

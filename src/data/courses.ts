@@ -76,7 +76,7 @@ export const cursos: Curso[] = [
     imagem: {
       src: '/media/fotos/scanner-em-uso',
       alt: 'Scanner de diagnóstico Bosch sendo conectado durante demonstração',
-      posicao: '60% 55%',
+      posicao: '50% 62%',
     },
   },
   {

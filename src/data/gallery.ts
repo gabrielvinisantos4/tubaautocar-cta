@@ -35,7 +35,7 @@ export const categorias: { id: 'todas' | CategoriaGaleria; label: string }[] = [
 const f = (nome: string) => `/media/fotos/${nome}`
 
 export const fotos: FotoGaleria[] = [
-  { src: f('turma-2016'), alt: 'Turma de alunos com camisetas brancas reunida para foto em grupo', legenda: 'Turma Tuba Auto Car, 10/03/2016', categoria: 'turmas', w: 1063, h: 560 },
+  { src: f('turma-2016'), alt: 'Turma de alunos com camisetas brancas reunida para foto em grupo', legenda: 'Turma Tuba Auto Car, 10/03/2016', categoria: 'turmas', w: 1536, h: 1024 },
   { src: f('evento-mecanica2000'), alt: 'Adriano Artico ao lado da equipe no estande da Mecânica 2000', legenda: 'Estande da Mecânica 2000 em feira do setor', categoria: 'eventos', w: 1448, h: 1086 },
   { src: f('aula-com-video'), alt: 'Instrutor apresenta conteúdo técnico em vídeo para profissionais sentados', legenda: 'Aula com apoio de conteúdo em vídeo', categoria: 'turmas', w: 1024, h: 768 },
   { src: f('evento-service-center'), alt: 'Adriano ao lado de um carro com o capô aberto em estande de feira', legenda: 'Feira do setor automotivo', categoria: 'eventos', w: 960, h: 720 },
@@ -49,12 +49,12 @@ export const fotos: FotoGaleria[] = [
   { src: f('turma-oficina'), alt: 'Pequena turma ao redor de uma mesa com componentes automotivos', legenda: 'Aula prática com componentes', categoria: 'turmas', w: 960, h: 720 },
   { src: f('evento-stand-mecanica2000'), alt: 'Adriano em frente ao estande de manuais técnicos', legenda: 'Estande de material técnico em feira', categoria: 'eventos', w: 1600, h: 1200 },
   { src: f('visita-tecnica-retifica'), alt: 'Grupo em frente a uma retífica de motores', legenda: 'Visita técnica a retífica de motores', categoria: 'turmas', w: 1600, h: 1200 },
-  { src: f('fachada-noite'), alt: 'Fachada do CTA à noite, com a sala de aula iluminada', legenda: 'Fachada do CTA em Colorado-PR', categoria: 'estrutura', w: 892, h: 1600 },
+  { src: f('fachada-noite'), alt: 'Fachada do CTA à noite, com a sala de aula iluminada', legenda: 'Fachada do CTA em Colorado-PR', categoria: 'estrutura', w: 914, h: 1600 },
   { src: f('evento-mecanica2000-antigo'), alt: 'Adriano com a equipe de recepcionistas em estande de feira', legenda: 'Estande da Mecânica 2000 em feira', categoria: 'eventos', w: 960, h: 720 },
   { src: f('evento-feira-pneus'), alt: 'Adriano em estande de pneus durante feira', legenda: 'Feira do setor automotivo', categoria: 'eventos', w: 1600, h: 1200 },
-  { src: f('biblioteca-tecnica'), alt: 'Adriano mostra revistas e manuais técnicos da estante', legenda: 'Biblioteca de manuais técnicos', categoria: 'estrutura', w: 899, h: 1600 },
+  { src: f('biblioteca-tecnica'), alt: 'Adriano mostra revistas e manuais técnicos da estante', legenda: 'Biblioteca de manuais técnicos', categoria: 'estrutura', w: 1079, h: 1458 },
   { src: f('evento-feira-stand'), alt: 'Adriano com outro profissional em estande de feira', legenda: 'Feira do setor automotivo', categoria: 'eventos', w: 1600, h: 1200 },
-  { src: f('sala-de-aula-2'), alt: 'Sala de aula com carteiras brancas e vista para a avenida', legenda: 'Sala de aula', categoria: 'estrutura', w: 892, h: 1600 },
+  { src: f('sala-de-aula-2'), alt: 'Sala de aula com carteiras brancas e vista para a avenida', legenda: 'Sala de aula', categoria: 'estrutura', w: 1086, h: 1449 },
 ]
 
 const v = (nome: string) => `/media/videos/${nome}`

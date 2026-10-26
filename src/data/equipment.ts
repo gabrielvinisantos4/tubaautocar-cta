@@ -81,7 +81,7 @@ export const espaco: (Equipamento & { formato: 'alto' | 'largo' })[] = [
     descricao: 'Material técnico projetado durante a aula.',
     imagem: '/media/fotos/conteudo-em-tela',
     alt: 'Televisão exibindo conteúdo técnico sobre motores',
-    posicao: '50% 85%',
+    posicao: '50% 72%',
     formato: 'alto',
   },
 ]
