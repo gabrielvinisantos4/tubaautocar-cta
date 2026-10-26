@@ -62,6 +62,6 @@ const v = (nome: string) => `/media/videos/${nome}`
 export const videos: VideoGaleria[] = [
   { src: v('apresentacao-cta.mp4'), capa: v('apresentacao-cta-capa.webp'), titulo: 'Conheça o CTA', descricao: 'Adriano apresenta a sala, os motores, os equipamentos e o material técnico.', duracao: '3:22', vertical: true },
   { src: v('tour-estrutura.mp4'), capa: v('tour-estrutura-capa.webp'), titulo: 'Tour pelo espaço', descricao: 'Da fachada à sala de aula e às bancadas de motores.', duracao: '1:11', vertical: true },
-  { src: v('aula-pratica-motor-1.mp4'), capa: v('aula-pratica-motor-1-capa.webp'), titulo: 'Prática no motor', descricao: 'Orientação técnica com o motor aberto.', duracao: '0:34', vertical: false },
+  { src: v('pratica-no-motor.mp4'), capa: v('pratica-no-motor-capa.webp'), titulo: 'Prática no motor', descricao: 'Orientação técnica com o motor aberto.', duracao: '0:26', vertical: false },
   { src: v('aula-pratica-motor-2.mp4'), capa: v('aula-pratica-motor-2-capa.webp'), titulo: 'Mão na massa', descricao: 'Trabalho em dupla no cofre do motor.', duracao: '0:25', vertical: false },
 ]
