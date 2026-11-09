@@ -13,6 +13,15 @@ npm run build      # gera a versão final na pasta dist/
 npm run preview    # testa a versão final: http://localhost:4173
 ```
 
+## Modo "Site em breve"
+
+Em `src/data/site.ts`, o campo `emBreve` controla o que vai ao ar:
+
+- `emBreve: true` mostra só a página "Site em breve" (logo, WhatsApp e endereço). O site completo nem é baixado pelo navegador.
+- `emBreve: false` publica o site completo.
+
+Depois de mudar, faça commit e push: a Vercel publica sozinha.
+
 ## Onde editar
 
 | O que | Arquivo |

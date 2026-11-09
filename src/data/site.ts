@@ -3,6 +3,12 @@
  * Edite aqui telefone, endereço e redes sociais — o site inteiro usa estes dados.
  */
 export const site = {
+  /**
+   * MODO "EM BREVE"
+   * true  = mostra só a página "Site em breve" (o site completo não é carregado).
+   * false = publica o site completo.
+   */
+  emBreve: true,
   nome: 'Tuba Auto Car',
   nomeCompleto: 'Tuba Auto Car — CTA Centro de Treinamento Automotivo',
   sigla: 'CTA',
