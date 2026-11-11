@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paleta: grafite com viés azul-aço + laranja de oficina como único acento. */
+:root {
+  --bg: 238 240 243; --surface: 255 255 255; --surface2: 244 246 248; --line: 222 226 232;
+  --fg: 20 24 31; --muted: 90 99 113; --accent: 194 65 12; --onaccent: 255 255 255;
+  --ok: 21 128 61; --bad: 200 40 40; --info: 37 99 235; --warn: 176 105 0; --onsolid: 255 255 255;
+  --font-display: "Saira Semi Condensed", "Arial Narrow", Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: 12 14 18; --surface: 20 23 29; --surface2: 27 31 38; --line: 40 46 56;
+    --fg: 232 235 240; --muted: 141 150 164; --accent: 255 122 26; --onaccent: 26 12 2;
+    --ok: 52 199 120; --bad: 244 104 104; --info: 96 155 250; --warn: 245 180 50; --onsolid: 12 15 19;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: 12 14 18; --surface: 20 23 29; --surface2: 27 31 38; --line: 40 46 56;
+  --fg: 232 235 240; --muted: 141 150 164; --accent: 255 122 26; --onaccent: 26 12 2;
+  --ok: 52 199 120; --bad: 244 104 104; --info: 96 155 250; --warn: 245 180 50; --onsolid: 12 15 19;
+  color-scheme: dark;
+}
+html, body { min-height: 100%; }
+body { margin: 0; background: rgb(var(--bg)); color: rgb(var(--fg)); font-family: var(--font-body); font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 40; background: rgb(var(--surface)); }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 1024px) { .gutter { padding-left: 32px; padding-right: 32px; } }
+.tnum { font-variant-numeric: tabular-nums; }
+.hazard { background: repeating-linear-gradient(-45deg, rgb(var(--accent)) 0 6px, transparent 6px 12px); }
+h1, h2, h3 { text-wrap: balance; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+.anim-rise { animation: rise .22s ease-out both; }
+.anim-fade { animation: fadein .18s ease-out both; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+@layer components {
+  .lbl { @apply text-[11px] uppercase tracking-[0.08em] font-semibold text-muted; }
+  .inp { @apply h-11 w-full rounded-xl border border-line bg-surface2 px-3 text-sm text-fg outline-none transition placeholder:text-muted/70 focus:border-accent focus:ring-2 focus:ring-accent/25; }
+  .card { @apply rounded-2xl border border-line bg-surface; }
+  .ring-focus { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent; }
+}
