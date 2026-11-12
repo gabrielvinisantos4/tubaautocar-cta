@@ -49,8 +49,8 @@ export const site = {
 export const desenvolvedor = {
   nome: 'Gabriel Vinícius dos Santos',
   /** Somente números, com 55 + DDD. */
-  whatsapp: '',
-  whatsappExibicao: '',
+  whatsapp: '5544997317970',
+  whatsappExibicao: '(44) 99731-7970',
 }
 
 export const navegacao = [
