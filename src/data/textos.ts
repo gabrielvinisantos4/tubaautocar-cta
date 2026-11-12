@@ -24,11 +24,11 @@ export const textos = {
   heroTexto:
     'Conhecimento técnico, equipamentos de diagnóstico e aprendizado voltado aos desafios reais da oficina.',
   heroFoto: {
-    src: '/media/fotos/adriano-bancada-motores',
-    alt: 'Adriano Artico, o Tuba, mostrando um motor didático na bancada do CTA',
+    src: '/media/fotos/adriano-professor',
+    alt: 'Adriano Ártico, professor geral de mecânica, de jaleco na sala de aula do CTA',
   } as Foto,
-  heroFotoTitulo: 'Adriano Artico, o Tuba',
-  heroFotoSubtitulo: 'Na bancada de motores do CTA',
+  heroFotoTitulo: 'Adriano Ártico',
+  heroFotoSubtitulo: 'Professor geral de mecânica',
 
   sobreTitulo: 'Experiência que se transforma em conhecimento.',
   /** Um parágrafo por item. */
