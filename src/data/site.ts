@@ -45,6 +45,14 @@ export const site = {
     'Olá! Conheci o site da Tuba Auto Car e gostaria de saber mais sobre os cursos disponíveis.',
 }
 
+/** Assinatura de quem desenvolveu o site (rodapé). Telefone vazio = não aparece. */
+export const desenvolvedor = {
+  nome: 'Gabriel Vinícius dos Santos',
+  /** Somente números, com 55 + DDD. */
+  whatsapp: '',
+  whatsappExibicao: '',
+}
+
 export const navegacao = [
   { id: 'inicio', label: 'Início' },
   { id: 'sobre', label: 'Sobre a escola' },

@@ -1,5 +1,5 @@
 import { cursosAtivos } from '../data/courses'
-import { mapsLink, navegacao, site } from '../data/site'
+import { desenvolvedor, mapsLink, navegacao, site } from '../data/site'
 import { whatsappLink } from '../lib/whatsapp'
 import { Logo } from './Header'
 
@@ -78,6 +78,24 @@ export function Footer() {
           © {ano} {site.nomeCompleto}
         </p>
         <p>Responsável: {site.responsavel.nome}</p>
+      </div>
+      <div className="container-x mt-4 text-[0.7rem] leading-relaxed text-aco/50">
+        <p>
+          Site desenvolvido por <span className="text-aco/70">{desenvolvedor.nome}</span>
+          {desenvolvedor.whatsapp && (
+            <>
+              {' · '}
+              <a
+                href={`https://wa.me/${desenvolvedor.whatsapp}?text=${encodeURIComponent('Olá! Vi o site da Tuba Auto Car e quero um site também.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cromo"
+              >
+                {desenvolvedor.whatsappExibicao}
+              </a>
+            </>
+          )}
+        </p>
       </div>
     </footer>
   )
