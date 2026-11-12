@@ -43,7 +43,7 @@ export const site = {
   },
   mensagemPadraoWhatsApp:
     'Olá! Conheci o site da Tuba Auto Car e gostaria de saber mais sobre os cursos disponíveis.',
-} as const
+}
 
 export const navegacao = [
   { id: 'inicio', label: 'Início' },
@@ -55,5 +55,12 @@ export const navegacao = [
   { id: 'contato', label: 'Contato' },
 ] as const
 
-export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.endereco.busca)}`
-export const mapsEmbed = `https://www.google.com/maps?q=${encodeURIComponent(site.endereco.busca)}&output=embed`
+export let mapsLink = ''
+export let mapsEmbed = ''
+
+/** Recalcula os links do mapa (chamado de novo quando o endereço vem da área restrita). */
+export function atualizarMapas() {
+  mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.endereco.busca)}`
+  mapsEmbed = `https://www.google.com/maps?q=${encodeURIComponent(site.endereco.busca)}&output=embed`
+}
+atualizarMapas()

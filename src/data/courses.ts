@@ -97,4 +97,5 @@ export const cursos: Curso[] = [
   },
 ]
 
-export const cursosAtivos = cursos.filter((c) => c.ativo)
+/** Atualizado também quando os cursos vêm da área restrita. */
+export const cursosAtivos: Curso[] = cursos.filter((c) => c.ativo)

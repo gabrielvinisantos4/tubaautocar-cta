@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { Cog, Activity, Zap } from 'lucide-react'
+import { textos } from '../data/textos'
 import { whatsappLink } from '../lib/whatsapp'
 import { Img, WhatsAppIcon } from './ui'
 import { Waveform } from './Waveform'
@@ -13,7 +14,7 @@ const areas = [
 const ease = [0.16, 1, 0.3, 1] as const
 
 export function Hero() {
-  const linhas = ['Aprenda', 'mecânica', 'automotiva', 'na prática.']
+  const linhas = textos.heroTitulo.split('\n').map((l) => l.trim()).filter(Boolean)
   return (
     <section
       id="inicio"
@@ -34,12 +35,12 @@ export function Hero() {
             className="mb-6 flex items-center gap-3 text-[0.95rem] font-medium text-aco"
           >
             <span className="inline-block h-[3px] w-8 bg-sinal" aria-hidden />
-            CTA Centro de Treinamento Automotivo · Colorado-PR
+            {textos.heroChamada}
           </motion.p>
 
           <h1 id="titulo-hero" className="display text-[clamp(3.4rem,10.5vw,7.6rem)] text-cromo">
             {linhas.map((l, i) => (
-              <span key={l} className="block overflow-hidden pb-[0.04em]">
+              <span key={`${i}-${l}`} className="block overflow-hidden pb-[0.04em]">
                 <motion.span
                   className="block"
                   initial={{ y: '105%' }}
@@ -58,8 +59,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.55, ease }}
             className="mt-7 max-w-[34rem] text-lg leading-relaxed text-aco sm:text-xl"
           >
-            Conhecimento técnico, equipamentos de diagnóstico e aprendizado voltado aos desafios
-            reais da oficina.
+            {textos.heroTexto}
           </motion.p>
 
           <motion.div
@@ -118,8 +118,8 @@ export function Hero() {
               className="relative aspect-[4/5] overflow-hidden bg-navy"
             >
               <Img
-                src="/media/fotos/adriano-bancada-motores"
-                alt="Adriano Artico, o Tuba, mostrando um motor didático na bancada do CTA"
+                src={textos.heroFoto.src}
+                alt={textos.heroFoto.alt}
                 sizes="(min-width: 1024px) 34vw, 90vw"
                 priority
                 className="size-full object-cover object-[50%_30%]"
@@ -127,9 +127,9 @@ export function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
               <figcaption className="absolute inset-x-0 bottom-0 p-5">
                 <span className="block font-display text-2xl font-bold uppercase leading-none text-cromo">
-                  Adriano Artico, o Tuba
+                  {textos.heroFotoTitulo}
                 </span>
-                <span className="mt-1 block text-sm text-aco">Na bancada de motores do CTA</span>
+                <span className="mt-1 block text-sm text-aco">{textos.heroFotoSubtitulo}</span>
               </figcaption>
             </motion.div>
           </div>

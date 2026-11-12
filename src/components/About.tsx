@@ -1,34 +1,6 @@
 import { site } from '../data/site'
+import { textos, trajetoria } from '../data/textos'
 import { Img, Reveal, SectionTitle } from './ui'
-
-/**
- * Trajetória baseada SOMENTE nos registros fornecidos pela empresa
- * (carteira de formação, foto de turma datada e o espaço atual).
- * Edite ou complemente quando houver novas informações confirmadas.
- */
-const trajetoria = [
-  {
-    periodo: '2006 a 2010',
-    titulo: 'Treinamentos da rede Volkswagen',
-    texto:
-      'A carteira de formação profissional de Adriano registra participação no programa Treinamento de Pessoal da Rede, com módulos como Escola Volante, Diagnóstico e Reparação Geral de Motores, Nova Saveiro e Curso Técnico Amarok.',
-    imagem: { src: '/media/fotos/registro-treinamento-rede-1', alt: 'Registros de participação em treinamentos da rede Volkswagen' },
-  },
-  {
-    periodo: '10/03/2016',
-    titulo: 'Turmas em visita técnica',
-    texto:
-      'Registro de turma da Tuba Auto Car. As visitas técnicas aproximam os alunos de fábricas, retíficas e fornecedores do setor.',
-    imagem: { src: '/media/fotos/turma-2016', alt: 'Turma de alunos reunida para foto em grupo' },
-  },
-  {
-    periodo: 'Hoje',
-    titulo: 'CTA em Colorado-PR',
-    texto:
-      'Sala de aula, motores em bancada, equipamentos de diagnóstico e uma biblioteca de manuais técnicos na Avenida Paraná, próximo ao Fórum.',
-    imagem: { src: '/media/fotos/fachada-noite', alt: 'Fachada do CTA à noite, com a sala de aula iluminada e o letreiro da Tuba Auto Car' },
-  },
-]
 
 export function About() {
   return (
@@ -39,8 +11,8 @@ export function About() {
           <Reveal className="relative lg:col-span-5">
             <div className="relative mr-10 aspect-[3/4] overflow-hidden bg-navy sm:mr-24 lg:mr-14">
               <Img
-                src="/media/fotos/biblioteca-tecnica"
-                alt="Adriano Artico, o Tuba, mostrando manuais técnicos da biblioteca do CTA"
+                src={textos.sobreFoto.src}
+                alt={textos.sobreFoto.alt}
                 sizes="(min-width: 1024px) 30vw, 80vw"
                 className="size-full object-cover object-[40%_50%]"
               />
@@ -48,14 +20,14 @@ export function About() {
             <figure className="absolute -bottom-10 right-0 w-[58%] border-[6px] border-cromo bg-cromo shadow-[0_24px_50px_-20px_rgb(6_18_46/0.55)] sm:w-[52%]">
               <div className="aspect-[4/3] overflow-hidden">
                 <Img
-                  src="/media/fotos/evento-mecanica2000"
-                  alt="Adriano Artico com a equipe da Mecânica 2000 em feira do setor"
+                  src={textos.sobreFotoMenor.src}
+                  alt={textos.sobreFotoMenor.alt}
                   sizes="(min-width: 1024px) 18vw, 50vw"
                   className="size-full object-cover"
                 />
               </div>
               <figcaption className="px-1 pt-2 text-xs leading-snug text-ink/70">
-                Em feira do setor automotivo, no estande da Mecânica 2000.
+                {textos.sobreFotoMenorLegenda}
               </figcaption>
             </figure>
           </Reveal>
@@ -64,22 +36,14 @@ export function About() {
           <div className="lg:col-span-7 lg:pl-8">
             <Reveal>
               <SectionTitle id="titulo-sobre" tone="light">
-                Experiência que se transforma em conhecimento.
+                {textos.sobreTitulo}
               </SectionTitle>
             </Reveal>
             <Reveal delay={0.08}>
               <div className="mt-8 max-w-[62ch] space-y-5 text-lg leading-relaxed text-ink/80">
-                <p>
-                  A Tuba Auto Car e o {site.sigla}, {site.descricaoSigla}, são conduzidos por{' '}
-                  <strong className="font-semibold text-ink">{site.responsavel.nome}</strong>, conhecido
-                  como <strong className="font-semibold text-ink">Tuba</strong>.
-                </p>
-                <p>
-                  A proposta é compartilhar o conhecimento técnico construído no dia a dia do setor
-                  automotivo com quem quer começar na mecânica ou se aperfeiçoar em diagnóstico,
-                  injeção eletrônica e elétrica. Nas aulas, o aluno tem contato com motores reais,
-                  equipamentos de diagnóstico e situações parecidas com as que encontra na oficina.
-                </p>
+                {textos.sobreParagrafos.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
             </Reveal>
             <Reveal delay={0.14}>
@@ -109,7 +73,7 @@ export function About() {
           <ol className="relative mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
             <span aria-hidden className="absolute left-0 right-0 top-[0.55rem] hidden h-[2px] bg-ink/15 md:block" />
             {trajetoria.map((t, i) => (
-              <li key={t.titulo} className="relative">
+              <li key={`${i}-${t.titulo}`} className="relative">
                 <Reveal delay={i * 0.08}>
                   <div className="flex items-center gap-3">
                     <span aria-hidden className="relative z-10 size-[1.15rem] shrink-0 rotate-45 border-[3px] border-tuba bg-cromo" />

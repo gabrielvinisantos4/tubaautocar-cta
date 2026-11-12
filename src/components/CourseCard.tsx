@@ -8,7 +8,7 @@ const icones: Record<IconeCurso, typeof Cog> = { motor: Cog, diagnostico: Activi
 
 export function CourseCard({ curso, invertido = false }: { curso: Curso; invertido?: boolean }) {
   const { abrir } = useInteresse()
-  const Icone = icones[curso.icone]
+  const Icone = icones[curso.icone] ?? Cog
   const extras = [
     curso.cargaHoraria && { label: 'Carga horária', valor: curso.cargaHoraria },
     curso.modalidade && { label: 'Modalidade', valor: curso.modalidade },

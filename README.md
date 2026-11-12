@@ -13,6 +13,22 @@ npm run build      # gera a versão final na pasta dist/
 npm run preview    # testa a versão final: http://localhost:4173
 ```
 
+## Área restrita (/admin)
+
+A escola altera textos, fotos, vídeos, cursos e contato em **seusite.com.br/admin**, sem mexer no código.
+
+- **Onde fica guardado:** Supabase, projeto `tuba-chamada` (tabelas `site_conteudo` e `site_admins`, pasta de arquivos `site-midia`). Não interfere nas tabelas do sistema de chamada.
+- **Quem pode alterar:** só usuários do Supabase cujo e-mail está na tabela `site_admins`. Qualquer outra pessoa só consegue ler.
+- **Criar um acesso novo:** no Supabase, *Authentication → Users → Add user → Create new user* (marque *Auto Confirm User*). Depois, no *SQL Editor*:
+  ```sql
+  insert into public.site_admins (email) values ('email@daescola.com.br');
+  ```
+- **Trocar senha:** *Authentication → Users*, clique no usuário → *Reset password* (ou *Send password recovery*, se o e-mail for real).
+- **Remover acesso:** `delete from public.site_admins where email = 'email@daescola.com.br';`
+- **Como funciona no site:** os arquivos em `src/data` são o conteúdo padrão. Ao abrir, o site busca o que foi salvo no painel e usa por cima dos padrões (`src/lib/conteudo.ts`). Se o banco estiver fora do ar, o site mostra os padrões.
+- **Voltar algo ao original:** apague a linha correspondente em `site_conteudo` (por exemplo `chave = 'galeria'`).
+- **Limites do plano grátis:** arquivos de até 50 MB e 1 GB no total. Vídeos devem ser MP4.
+
 ## Modo "Site em breve"
 
 Em `src/data/site.ts`, o campo `emBreve` controla o que vai ao ar:
@@ -26,7 +42,8 @@ Depois de mudar, faça commit e push: a Vercel publica sozinha.
 
 | O que | Arquivo |
 | --- | --- |
-| Telefone/WhatsApp, endereço, e-mail, Instagram e outras redes | `src/data/site.ts` |
+| Textos, fotos, cursos, vídeos e contato (sem código) | **Área restrita: /admin** |
+| Telefone/WhatsApp, endereço, e-mail, Instagram e outras redes (padrão) | `src/data/site.ts` |
 | Mensagem padrão do WhatsApp | `src/data/site.ts` (`mensagemPadraoWhatsApp`) e `src/lib/whatsapp.ts` |
 | **Cursos** (adicionar, editar, desativar, datas de turma) | `src/data/courses.ts` |
 | Equipamentos e fotos do espaço | `src/data/equipment.ts` |

@@ -1,6 +1,7 @@
 import { ClipboardCheck, PlayCircle, ScanLine, Users } from 'lucide-react'
 import { etapasOficina, servicosOficina, type IconeServico } from '../data/workshops'
 import { whatsappLink } from '../lib/whatsapp'
+import { textos } from '../data/textos'
 import { Img, Reveal, WhatsAppIcon } from './ui'
 
 const icones: Record<IconeServico, typeof Users> = {
@@ -22,14 +23,12 @@ export function WorkshopSection() {
                 Para oficinas mecânicas
               </p>
               <h2 id="titulo-oficinas" className="display text-[2.6rem] sm:text-6xl lg:text-7xl">
-                O conhecimento do CTA dentro da sua oficina.
+                {textos.oficinasTitulo}
               </h2>
             </Reveal>
             <Reveal delay={0.08}>
               <p className="mt-6 max-w-[54ch] text-lg leading-relaxed text-ink/75">
-                Além das turmas no CTA, o Tuba atende oficinas com consultoria, apoio técnico em
-                serviços e treinamentos para a equipe, no próprio ambiente de trabalho, com os carros e
-                equipamentos do dia a dia.
+                {textos.oficinasTexto}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -54,8 +53,8 @@ export function WorkshopSection() {
               <div className="bezel relative aspect-[4/3] bg-navy">
                 <div className="absolute inset-0 overflow-hidden">
                   <Img
-                    src="/media/fotos/oficina-orientacao"
-                    alt="Tuba orientando um mecânico com o capô aberto em uma oficina"
+                    src={textos.oficinasFoto.src}
+                    alt={textos.oficinasFoto.alt}
                     sizes="(min-width: 1024px) 46vw, 92vw"
                     className="size-full object-cover"
                   />
@@ -64,8 +63,8 @@ export function WorkshopSection() {
               <div className="absolute -bottom-8 -left-4 hidden w-[38%] border-[6px] border-cromo shadow-[0_24px_50px_-20px_rgb(6_18_46/0.55)] sm:block lg:-left-10">
                 <div className="aspect-[4/3] overflow-hidden bg-navy">
                   <Img
-                    src="/media/fotos/oficina-motor"
-                    alt="Motor aberto com o cabeçote removido durante atendimento"
+                    src={textos.oficinasFotoMenor.src}
+                    alt={textos.oficinasFotoMenor.alt}
                     sizes="20vw"
                     className="size-full object-cover"
                   />
@@ -79,7 +78,7 @@ export function WorkshopSection() {
         {/* Serviços */}
         <ul className="mt-24 grid gap-px bg-ink/15 lg:grid-cols-3">
           {servicosOficina.map((s, i) => {
-            const Icone = icones[s.icone]
+            const Icone = icones[s.icone] ?? ClipboardCheck
             return (
               <li key={s.id} className="bg-cromo lg:px-8 lg:first:pl-0 lg:last:pr-0">
                 <Reveal delay={i * 0.07} className="flex h-full flex-col border-t-4 border-tuba pt-8">

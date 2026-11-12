@@ -8,9 +8,17 @@ import '@fontsource/saira-condensed/700.css'
 import '@fontsource/saira-condensed/800.css'
 import './index.css'
 import App from './App.tsx'
+import { aplicarConteudo, buscarConteudoSalvo } from './lib/conteudo'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const ehAdmin = window.location.pathname.startsWith('/admin')
+
+async function iniciar() {
+  // Aplica o que a escola salvou na área restrita antes de desenhar o site.
+  if (!ehAdmin) aplicarConteudo(await buscarConteudoSalvo())
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <App admin={ehAdmin} />
+    </StrictMode>,
+  )
+}
+iniciar()

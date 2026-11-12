@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { MapPin, Navigation, Phone, UserRound } from 'lucide-react'
 import { mapsEmbed, mapsLink, site } from '../data/site'
+import { textos } from '../data/textos'
 import { whatsappLink } from '../lib/whatsapp'
 import { Img, Reveal, SectionTitle, WhatsAppIcon } from './ui'
 
@@ -104,8 +105,8 @@ export function ContactSection() {
                 aria-label="Carregar mapa interativo da localização"
               >
                 <Img
-                  src="/media/fotos/fachada-dia"
-                  alt="Fachada da Tuba Auto Car e do CTA na Avenida Paraná, em Colorado-PR"
+                  src={textos.contatoFoto.src}
+                  alt={textos.contatoFoto.alt}
                   sizes="(min-width: 1024px) 55vw, 100vw"
                   className="size-full object-cover"
                 />

@@ -1,3 +1,4 @@
+import { textos } from '../data/textos'
 import { whatsappLink } from '../lib/whatsapp'
 import { Reveal, WhatsAppIcon } from './ui'
 
@@ -15,11 +16,10 @@ export function CtaSection() {
       <div className="container-x relative py-20 lg:py-24">
         <Reveal className="max-w-3xl">
           <h2 id="titulo-cta" className="display text-[2.8rem] sm:text-6xl lg:text-7xl">
-            Seu próximo passo na área automotiva começa aqui.
+            {textos.ctaTitulo}
           </h2>
           <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-ink/80 sm:text-xl">
-            Conheça os treinamentos disponíveis e converse com a equipe para encontrar o curso mais
-            adequado ao seu objetivo.
+            {textos.ctaTexto}
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href="#cursos" className="btn btn-dark">
